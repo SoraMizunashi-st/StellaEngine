@@ -1,0 +1,10 @@
+^C:\USERS\MOON\DESKTOP\STELLAENGINE\STELLAENGINE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/moon/Desktop/StellaEngine/StellaEngine -BC:/Users/moon/Desktop/StellaEngine/StellaEngine/build --check-stamp-file C:/Users/moon/Desktop/StellaEngine/StellaEngine/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
